@@ -1,0 +1,36 @@
+
+.test-div {
+    background: rgb(218, 209, 255);
+    padding: 20 px;
+    margin: 20px;
+}
+
+.test-div {color: aquamarine}
+
+.test-div h2 {
+    color: rgb(131, 78, 131)
+}
+
+.test-div:hover {
+    background: pink;
+}
+h1, h2, h3 {
+text-decoration: underline;
+}
+
+H2 {color: blue}
+
+button.special {
+    background: rgb(250, 239, 195)
+}
+
+#house {
+    display: flex;
+    flex-direction: wrap
+}
+
+#house DIV {width: 400px;}
+#split {
+    display: flex; 
+    flex-direction: column;
+}
