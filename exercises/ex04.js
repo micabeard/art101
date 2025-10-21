@@ -1,16 +1,17 @@
 
-let totalNumber = 0;
-
 // add a button titled click me
 
+let count = 0;
+let colors = ["Orchid", "Coral", "HotPink", "Plum"]; // new line tp add
+colors[1]; //returns "Coral".
+
 $("#needy-button").click(function () {
-    totalNumber = totalNumber + 3;
 
-    let sentence = "I love you ";
-    let comment = " times more";
-    let totalNumbers= sentence + totalNumber + comment;
+let reminder=count % colors.length;
 
-        $("#needy-button").html(totalNumbers);
+    $("#needy-button").html("Clicks" + count + "Color:" + colors[count]);
+    $("body").css("background-color", colors[reminder]);
+    count = count + 1;
 });
 
 // when it is clicked
