@@ -1,33 +1,30 @@
-<html>
-
+<!doctype html>
+<html lang="en">
 <head>
-
-    <link href="env02.css" rel="stylesheet" type="text/css" />
-
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Env 03 — Breathe</title>
+    <link href="env03.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="env03.js" defer></script>
 </head>
-
 <body>
-
-
-   
-    <img id="myjellyfish" src="/images/jellyfish.png" />
-<img id="myfishies" src="/images/schooloffish.png" />
+    <img id="myjellyfish" src="/images/jellyfish.png" alt="jellyfish" />
+    <img id="myfishies" src="/images/schooloffish.png" alt="school of fish" />
 
     <h1>breathe in, breathe out...</h1>
 
-    </p>
-    <h2>take a break for a moment and imagine you are a jellyfish. <br>
-        jellyfish have no brain, therefore they have no consciousness/self awareness. <br>
-        close your eyes and experience the bliss of being a jellyfish. <br>
-     </h2>
-    </div>
+    <h2>
+        take a break for a moment and imagine you are a jellyfish.<br />
+        jellyfish have no brain, therefore they have no consciousness/self awareness.<br />
+        close your eyes and experience the bliss of being a jellyfish.
+    </h2>
+
+    <div id="output" aria-live="polite"></div>
+
+    <div class="controls">
+        <button id="magic-button">inhale for</button>
+        <button id="magic-button2">exhale for</button>
+    </div>  
 </body>
-
-
-
-
-
-
-
 </html>
