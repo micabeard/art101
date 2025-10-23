@@ -1,32 +1,82 @@
-// add a button titled click me
+var count = 0;
+let colorCount=0;
+var colors = ["Orchid", "Coral", "HotPink", "Plum"]; 
 
-$(function() {
-    // start at 1 so the button initially shows "1 second(s)"
-    let count = 1;
-    let colors = ["Orchid", "Coral", "HotPink", "Plum"]; // color choices for background
 
-    // set initial button text
-    $("#needy-button").text(count + " second(s)");
+$("#needy-button").click(function () {
 
-    $("#needy-button").click(function () {
-        // increment first so after click it shows the next number
-        count = count + 1;
+    if ( count < 5) { mood = "gresh and happy" ; }
+    else if ( (count >=5) && (count <10 )) { mood="keep pushing"; }
+    else { mood = "so tired" ; }
 
-        // update the button label
-        $("#needy-button").text(count + " second(s)");
+    $("#needy-button").html( "Clicks: " + count + " Color: " + colors[colorCount] + " " + mood); 
 
-        // choose a background color based on the current count (safe with modulus)
-        let colorIndex = (count - 1) % colors.length; // subtract 1 to map 1-based count to 0-based index
-        $("body").css("background-color", colors[colorIndex]);
-    });
+    $("body").css("background-color", colors[colorCount]);
+
+    if ( colors[colorCount] == "Orchid" ) {
+        $("body").append("<img width=50 src='images/orchid.png'>");
+}
+
+
+
+    count = count + 1;
+    colorCount = colorCount + 1;
+
+    if ( colorCount == 4 ) {  colorCount=0;  }
+
+
+
+
 });
 
-// when it is clicked
-// add one to the total number 
-
-//  show the total number
-//on our button
-// show "clicked total number times"
 
 
-// a top limit
+
+
+// let count = 0;
+// let colorIndex = 0;
+// let mood;
+// let colors = ["Orchid", "Coral", "HotPink", "Plum"];
+
+// $("#needy-button").click(function () {
+
+//     if (count < 5) { mood = "fresh and happy"; }
+//     else if ( count > 3) { mood = "keep pushing"; }
+//     else { mood = "so tired!"; }
+
+//     $("#needy-button").html("Clicks: " + count + " Color: " + colors[colorIndex] + " - " + mood);
+
+//     $("body").css("background-color", colors[colorIndex]);
+
+//     count = count + 1;
+//     colorIndex = colorIndex + 1;
+
+//     if (colorIndex == 4) { colorIndex = 0; } // new line
+
+// });
+
+
+
+
+
+
+
+
+
+
+
+// let count = 0;
+// let colors = ["Orchid", "Coral", "HotPink", "Plum"]; 
+
+// $("#needy-button").click(function () {
+
+//     $("#needy-button").html( "Clicks: " + count + " Color: " + colors[count]  + " ...fresh and happy" ); 
+
+//     $("body").css("background-color", colors[count]);
+
+//     count = count + 1;
+
+//     if (count==4) { count=0; } // new line
+
+// });
+﻿
