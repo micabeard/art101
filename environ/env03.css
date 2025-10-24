@@ -11,7 +11,7 @@
    position: relative
 }
 body {
-   background-image: url(/images/water.jpg);
+   background-image: url(images/water.jpg);
    background-size: cover;
    background-repeat: no-repeat;
    font-family: sans-serif;

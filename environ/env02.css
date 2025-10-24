@@ -35,7 +35,7 @@ h2 {
    margin-top: -200px
 }
 body {
-   background-image: url(/images/water.jpg);
+   background-image: url(images/water.jpg);
    background-size: cover;
    background-repeat: no-repeat;
 }
