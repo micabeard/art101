@@ -24,7 +24,7 @@ $(function () {
     }
 
     function changeEnvironment(mood, waterTemp) {
-        if (mood === "happy" && waterTemp > 20) {
+        if (mood === "happy" ) {
             $("body").css("background-image", "url('../images/warmsea.jpg')");
             $("#megaSentence").text(
                 myLittleJellyfish.name + " is happy in the warm sea!"
@@ -52,9 +52,9 @@ $(function () {
         $btn.text(labelFor(value));
 
         if (value >= 3) {
-            changeEnvironment("calm", 22);
+            changeEnvironment("calm");
         } else {
-            changeEnvironment("happy", 25);
+            changeEnvironment("happy");
         }
     });
 
