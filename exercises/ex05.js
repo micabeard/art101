@@ -13,6 +13,7 @@ $(".color-button").click( function(){
     changeBackground (this.id);
     });
 }
+
 //the button part
 $("#needy-button").click(function () {
     let mood;
