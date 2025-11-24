@@ -1,16 +1,16 @@
 $(function () {
-    const inhaleSeconds = [1, 2, 3, 4];
-    const exhaleSeconds = [1, 2, 3, 4];
+    const inhaleSeconds = [1, 2, 3, 4],
+        exhaleSeconds = [1, 2, 3, 4];
 
-    let inhaleIndex = -1;
-    let exhaleIndex = -1;
-
+    let inhaleIndex = -1,
+        exhaleIndex = -1;
     const myLittleJellyfish = {
         age: 2,
         name: "Spirulina",
         noBrain: true,
     };
-
+    const bodyBg = $("body");
+    const megaText = $("#megaSentence");
     const megaSentence = `<p id="megaSentence">
         Hi! My name is ${myLittleJellyfish.name}.
         I am ${myLittleJellyfish.age} years old, and some people ask:
@@ -23,15 +23,15 @@ $(function () {
         return n + (n === 1 ? " second" : " second(s)");
     }
 
-    function changeEnvironment(mood, waterTemp) {
+    function changeEnvironment(mood) {
         if (mood === "happy") {
-            $("body").css("background-image", "url('../images/warmsea.jpg')");
-            $("#megaSentence").text(
+            bodyBg.css("background-image", "url('../images/warmsea.jpg')");
+            megaText.text(
                 myLittleJellyfish.name + " is happy in the warm sea!"
             );
         } else if (mood === "calm") {
-            $("body").css("background-image", "url('../images/water.jpg')");
-            $("#megaSentence").text(
+            $(bodyBg).css("background-image", "url('../images/water.jpg')");
+            $(megaText).text(
                 myLittleJellyfish.name + " is feeling calm and peaceful."
             );
 
@@ -86,11 +86,11 @@ $(function () {
             );
             $("#megaSentence").text("The fish came back. All is calm again.");
         });
-        $(document).mousemove(function(event) {
-  $("#myjellyfish").css({
-    left: event.pageX - 60,
-    top: event.pageY - 60,
-  
-  });
-});
+    $(document).mousemove(function (event) {
+        $("#myjellyfish").css({
+            left: event.pageX - 900,
+            top: event.pageY - 200
+
+        });
+    });
 });
