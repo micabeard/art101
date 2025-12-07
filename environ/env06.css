@@ -45,3 +45,6 @@ body {
 #megaSentence {
     color: white;
 }
+#myjellyfish {
+    pointer-events: none;
+}

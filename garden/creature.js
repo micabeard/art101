@@ -96,6 +96,9 @@ function clearForm() {
 
 $("#add-creature").click(
     async function () {
+allCreatures.push(newCreature);   // remember it
+   addCreatureToDOM(newCreature);    // show it
+   creaturesRef.push(newCreature); // save the new creature to the database
 
  
     let newCreature;

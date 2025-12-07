@@ -90,7 +90,6 @@ $(function () {
         $("#myjellyfish").css({
             left: event.pageX - 900,
             top: event.pageY - 200
-
         });
     });
 });

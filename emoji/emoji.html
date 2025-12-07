@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emoji Builder</title>
+    <link rel="stylesheet" href="emoji.css" />
+</head>
+<body>
+
+<h1>Emoji Builder</h1>
+
+<!-- Emoji display area -->
+<div id="emoji-container">
+    <img id="face" class="layer" src="" />
+    <img id="eyes" class="layer" src="" />
+    <img id="mouth" class="layer" src="" />
+    <img id="brows" class="layer" src="" />
+</div>
+
+<div id="controls">
+
+    <!-- Face shapes -->
+    <div class="picker-group">
+        <h2>Choose Face Shape</h2>
+        <div class="options" id="faceOptions"></div>
+    </div>
+
+    <!-- Eyes -->
+    <div class="picker-group">
+        <h2>Eyes</h2>
+        <div class="options" id="eyesOptions"></div>
+    </div>
+
+    <!-- Mouth -->
+    <div class="picker-group">
+        <h2>Mouth</h2>
+        <div class="options" id="mouthOptions"></div>
+    </div>
+
+    <!-- Brows -->
+    <div class="picker-group">
+        <h2>Eyebrows</h2>
+        <div class="options" id="browsOptions"></div>
+    </div>
+
+</div>
+
+<button id="downloadBtn" onclick="downloadEmoji()">Download Emoji</button>
+
+<script src="emoji.js"></script>
+</body>
+</html>
