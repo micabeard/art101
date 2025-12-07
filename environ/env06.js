@@ -86,10 +86,21 @@ $(function () {
             );
             $("#megaSentence").text("The fish came back. All is calm again.");
         });
-    $(document).mousemove(function (event) {
-        $("#myjellyfish").css({
-            left: event.pageX - 900,
-            top: event.pageY - 200
-        });
+   $(document).mousemove(function (event) {
+    if (!followMouse) return; // only move when mode is ON
+
+    $("#myjellyfish").css({
+        left: event.pageX - 200,
+        top: event.pageY - 100
     });
+});
+  let followMouse = false;
+
+$("#toggle-follow").on("click", function () {
+    followMouse = !followMouse;
+
+    $(this).text(
+        followMouse ? "Disable Follow Mode" : "Enable Follow Mode"
+    );
+});
 });

@@ -46,5 +46,11 @@ body {
     color: white;
 }
 #myjellyfish {
-    pointer-events: none;
+    position: absolute;
+    z-index: 1;   /* low number */
+}
+
+button {
+    position: relative;
+    z-index: 999; /* on top */
 }
